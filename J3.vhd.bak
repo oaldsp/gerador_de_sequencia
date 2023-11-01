@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity J3 is
+	port(
+	J3Q0:  in std_logic;
+	J3Q1:  in std_logic;
+	J3Q2:  in std_logic;
+	J3Q3:  in std_logic;
+	J3OUT: out std_logic
+	);
+end J3;
+
+architecture J3_arch of J3 is 
+	begin 
+		J3OUT<= ((NOT J3Q2)AND(NOT J3Q1)AND( NOTJ3Q0))OR(J3Q2 AND J3Q1); 
+end J3_arch;

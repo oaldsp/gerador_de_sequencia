@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity K1 is
+	port(
+	K1Q0:  in std_logic;
+	K1Q1:  in std_logic;
+	K1Q2:  in std_logic;
+	K1Q3:  in std_logic;
+	K1OUT: out std_logic
+	);
+end K1;
+
+architecture K1_arch of K1 is 
+	begin 
+		K1OUT<= (K1Q3 AND((NOT K1Q2)OR(NOT K1QO)))OR((NOT K1Q2)AND(NOT K1QO)); 
+end K1_arch;
